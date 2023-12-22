@@ -165,6 +165,8 @@
                             coordsY.push(YYYCoordYYY - (segmentHeightY / 2));
                         }
 
+                        
+
                         return coordsY;
                     }
 
@@ -189,17 +191,17 @@
                             const currLine = rLines[index];
                             const currPoint = rPoints[index];
 
-                            currLine.setAttribute('x1', productVectorBlock.parentElement.offsetWidth - 5);
+                            currLine.setAttribute('x1', productVectorBlock.parentElement.offsetWidth - 10);
                             currLine.setAttribute('y1', rElsPos.top + 10);
                             currLine.setAttribute('x2', productVectorBlock.parentElement.offsetWidth - 100);
                             if (index == 0) {
                                 currLine.setAttribute('y2', YCoordIMG(articlesRight.length)[index] + 20);
                             } else {
-                                let y2 = YCoordIMG(articlesRight.length);
+                                let y2 = YCoordIMG(articlesRight.length, 5);
                                 currLine.setAttribute('y2', y2[index]);
                             }
                             
-                            currPoint.setAttribute('cx', productVectorBlock.parentElement.offsetWidth - 5);
+                            currPoint.setAttribute('cx', productVectorBlock.parentElement.offsetWidth - 10);
                             currPoint.setAttribute('cy', rElsPos.top + 10);
                         });
 
@@ -212,7 +214,7 @@
                             currLine.setAttribute('x1', 5);
                             currLine.setAttribute('y1', lElsPos.top + 10);
                             currLine.setAttribute('x2', 100);
-                            currLine.setAttribute('y2', YCoordIMG(articlesLeft.length)[index], 15);
+                            currLine.setAttribute('y2', YCoordIMG(articlesLeft.length, 15)[index]);
 
                             currPoint.setAttribute('cx', 5);
                             currPoint.setAttribute('cy', lElsPos.top + 10);
@@ -330,48 +332,18 @@
 
                 <span class="annotated-ui__annotation__figure__background picture--w-100 picture--image-abs-ar">
                     <picture style="padding-top: 104.638%">
-                        <source srcset="./img/annotated-ui/anim_screen0.webp, 
-                            ./img/annotated-ui/anim_screen0.webp 2x" media="(min-width: 1460px)">
-                        <source srcset="./img/annotated-ui/anim_screen1.webp, 
-                            ./img/annotated-ui/anim_screen1.webp 2x" media="(min-width: 1200px) and (max-width: 1459px)">
-                        <source srcset="./img/annotated-ui/anim_screen2.webp, 
-                            ./img/annotated-ui/anim_screen2.webp 2x, 
-                            ./img/annotated-ui/anim_screen2.webp 3x" media="(min-width: 992px) and (max-width: 1199px)">
-                        <source srcset="./img/annotated-ui/anim_screen3.webp, 
-                            ./img/annotated-ui/anim_screen3.webp 2x, 
-                            ./img/annotated-ui/anim_screen3.webp 3x, 
-                            ./img/annotated-ui/anim_screen3.webp 4x" media="(min-width: 768px) and (max-width: 991px)">
-                        <source srcset="./img/annotated-ui/anim_screen3.webp, 
-                            ./img/annotated-ui/anim_screen3.webp 2x, 
-                            ./img/annotated-ui/anim_screen3.webp 3x, 
-                            ./img/annotated-ui/anim_screen3.webp 4x" media="(max-width: 767px)">
-                        <img src="./img/annotated-ui/anim_screen1.webp" alt="Interactive UI_IMPACT Max_Annimation" srcset="./img/annotated-ui/anim_screen0.webp 690w,
-                            ./img/annotated-ui/anim_screen1.webp 540w, 
-                            ./img/annotated-ui/anim_screen1.webp 1080w, 
-                            ./img/annotated-ui/anim_screen2.webp 450w, 
-                            ./img/annotated-ui/anim_screen2.webp 900w, 
-                            ./img/annotated-ui/anim_screen2.webp 1350w, 
-                            ./img/annotated-ui/anim_screen3.webp 330w, 
-                            ./img/annotated-ui/anim_screen3.webp 660w, 
-                            ./img/annotated-ui/anim_screen3.webp 990w, 
-                            ./img/annotated-ui/anim_screen3.webp 1320w, 
-                            ./img/annotated-ui/anim_screen3.webp 330w, 
-                            ./img/annotated-ui/anim_screen3.webp 660w, 
-                            ./img/annotated-ui/anim_screen3.webp 990w, 
-                            ./img/annotated-ui/anim_screen3.webp 1320w" sizes="(min-width: 1460px) 690px, 
-                            (min-width: 1460px) 690px, 
-                            (min-width: 1200px) and (max-width: 1459px) 540px, 
-                            (min-width: 1200px) and (max-width: 1459px) 540px, 
-                            (min-width: 992px) and (max-width: 1199px) 450px, 
-                            (min-width: 992px) and (max-width: 1199px) 450px, 
-                            (min-width: 992px) and (max-width: 1199px) 450px, 
-                            (min-width: 768px) and (max-width: 991px) 330px, 
-                            (min-width: 768px) and (max-width: 991px) 330px, 
-                            (min-width: 768px) and (max-width: 991px) 330px, 
-                            (min-width: 768px) and (max-width: 991px) 330px, 
-                            (max-width: 767px) 330px, 
-                            (max-width: 767px) 330px, 
-                            (max-width: 767px) 330px, 
+                        <img src="./img/annotated-ui/anim_screen1.webp" 
+                            alt="Interactive UI_IMPACT Max_Annimation" 
+                            srcset="./img/annotated-ui/anim_screen0.webp 690w,
+                                ./img/annotated-ui/anim_screen1.webp 540w, 
+                                ./img/annotated-ui/anim_screen2.webp 450w, 
+                                ./img/annotated-ui/anim_screen3.webp 330w"
+                            sizes="(min-width: 1460px) 690px, 
+                                (min-width: 1460px) 690px, 
+                                (min-width: 1200px) and (max-width: 1459px) 540px, 
+                                (min-width: 992px) and (max-width: 1199px) 450px, 
+                                (min-width: 768px) and (max-width: 991px) 330px, 
+                                (max-width: 767px) 330px, 
                             330px">
                     </picture>
                 </span>

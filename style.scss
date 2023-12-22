@@ -15,7 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     &__wrapper {
-        max-width: 854px;
+        max-width: 900px;
         width: 100%;
         margin: 0 auto;
         display: flex;
@@ -26,7 +26,7 @@ body {
         }
     }
     &__item {
-        max-width: 370px;
+        max-width: 390px;
         width: 100%;
         flex: 1 1 100%;
         display: flex;
@@ -96,12 +96,7 @@ body {
                 line-height: 14.63px;
 
                 border-radius: 10px;
-                &:first-child {
-                    background: #642980;
-                }
-                &:last-child {
-                    background: #FC2E81;
-                }
+                background: #000;
             }
         }
         img {
@@ -362,7 +357,7 @@ body {
         max-width: 460px;
         flex: 1 1 100%;
         min-height: 424px;
-        padding: 11px 20px;
+        padding: 26px 20px;
         flex: 1 1 100%;
         display: flex;
         flex-direction: column;
@@ -858,11 +853,11 @@ body {
                 padding-right: calc((100% - 820px) / 2 + 15px);
             }
             @media (min-width: 992px) and (max-width: 1199.98px) {
-                width: 450px;
+                width: 480px;
                 padding-right: calc((100% - 1010px) / 2 + 15px);
             }
             @media (min-width: 1200px) and (max-width: 1459.98px) {
-                width: 540px;
+                width: 600px;
                 padding-right: calc((100% - 1140px) / 2 + 15px);
             }
             @media (min-width: 1460px) {
@@ -951,104 +946,6 @@ body {
     100% {
         opacity: 0;
         transform: scale(1.2);
-    }
-}
-.banner {
-    padding: 100px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    &__wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    &__item {
-        max-width: 430px;
-        width: 100%;
-        padding: 50px 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        background-color: rgba($color: #FAFAFAE5, $alpha: .9);
-
-        &--title {
-            text-align: center;
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 36.57px;
-            letter-spacing: -2.3%;
-        }
-        &--description {
-            text-align: center;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24.38px;
-            letter-spacing: -2.3%;
-        }
-        &--link {
-            text-align: center;
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 14.63px;
-            color: #000;
-
-        }
-    }
-    &-noimg {
-        padding: 90px 0;
-        background-color: #40C5E3;
-        color: #fff;
-        &__wrapper {
-            display: flex;
-            flex-direction: row;
-        }
-        &__item {
-            display: flex;
-            flex-direction: column;
-            z-index: 0;
-            &--title {
-                font-weight: 600;
-                font-size: 30px;
-                line-height: 44px;
-            }
-            hr {
-                opacity: 1;
-                border: 1.5px solid #fff;
-            }
-            &_body {
-                display: flex;
-                flex-direction: row;
-                gap: 20px;
-                @media screen and (max-width: 768px) {
-                    flex-direction: column;
-                }
-            }
-            &--img {
-                width: 50%;
-                flex: 1 1 100%;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            &--description {
-                width: 50%;
-                flex: 1 1 100%;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-            &--link {
-                margin-top: 20px;
-                text-align: center;
-                color: #000;
-            }
-        }
     }
 }
 
