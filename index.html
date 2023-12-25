@@ -195,9 +195,10 @@
                             currLine.setAttribute('y1', rElsPos.top + 10);
                             currLine.setAttribute('x2', productVectorBlock.parentElement.offsetWidth - 100);
                             if (index == 0) {
-                                currLine.setAttribute('y2', YCoordIMG(articlesRight.length)[index] + 20);
+                                let y2 = YCoordIMG(articlesRight.length);
+                                currLine.setAttribute('y2', y2[index] + 20);
                             } else {
-                                let y2 = YCoordIMG(articlesRight.length, 5);
+                                let y2 = YCoordIMG(articlesRight.length, 13);
                                 currLine.setAttribute('y2', y2[index]);
                             }
                             
@@ -214,18 +215,16 @@
                             currLine.setAttribute('x1', 5);
                             currLine.setAttribute('y1', lElsPos.top + 10);
                             currLine.setAttribute('x2', 100);
-                            currLine.setAttribute('y2', YCoordIMG(articlesLeft.length, 15)[index]);
+                            currLine.setAttribute('y2', YCoordIMG(articlesLeft.length, 23)[index]);
 
                             currPoint.setAttribute('cx', 5);
                             currPoint.setAttribute('cy', lElsPos.top + 10);
                         });
                     }
                     document.addEventListener('DOMContentLoaded', () => {
-                        /* setDisplay(); */
                         setVectors();
                     });
                     window.addEventListener('resize', () => {
-                        /* setDisplay(); */
                         setVectors();
                     });
                 })();
